@@ -120,3 +120,61 @@ int main()
 
 //Write a program to make the last digit of a number stored in a variable as zero.
 //	(Example - if x=2345 then make it x=2340)
+#include<stdio.h>
+int main()
+{
+  int n,x;
+  printf("enter the number:");
+  scanf("%d",&n);
+  if (n>0)
+  {
+    x=n%10;
+    n=n-x;
+    printf("%d",n);
+  }
+  else
+  {
+    printf("already zero");
+  }
+}
+
+/*Write a program to input a number from the user and also input a digit. Append a
+	digit in the number and print the resulting number. (Example - number=234 and
+	digit=9 then the resulting number is 2349)*/
+#include<stdio.h>
+int main()
+{
+  int num,digit;
+  printf("enter the number and digit:");
+  scanf("%d %d",&num,&digit);
+  if (num>0)
+  {
+    num=num*10+digit;
+    printf("the number is :%d",num);
+  }
+}
+
+//Assume price of 1 USD is INR 86.59. Write a program to take the amount in INR and convert it into USD.
+#include<stdio.h>
+int main()
+{
+  float i,u;
+  printf("enter the indian amount:");
+  scanf("%f",&i);
+  u=i/86.59;
+  printf("the USD of the indian rupee %f is %f",i,u);
+}
+
+//Write a program to take a three-digit number from the user and rotate its digits by one position towards the right.
+#include<stdio.h>
+int main()
+{
+  int num,rot;
+  printf("enter the nnumber:");
+  scanf("%d",&num);
+  rot=num%10;
+  num=num/10;
+  rot=rot*100;
+  num=num+rot;
+  printf("the rotation of one position to right is:%d",num);
+}
